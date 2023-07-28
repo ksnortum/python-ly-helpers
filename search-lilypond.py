@@ -19,7 +19,7 @@ class SearchLilyPond:
         'commands': "https://lilypond.org/doc/{}/Documentation/notation/lilypond-command-index",
         'index': "https://lilypond.org/doc/{}/Documentation/notation/lilypond-index",
     }
-    versions = ('v2.24', 'v2.22', 'v2.20', 'v2.18', 'v2.16', 'v2.14')
+    versions = ('v2.25', 'v2.24', 'v2.22', 'v2.20', 'v2.18', 'v2.16', 'v2.14')
 
     @staticmethod
     def get_arguments() -> argparse.Namespace:
