@@ -8,14 +8,16 @@ class CompareLilyPondToWords:
     """
     It's easy for python-ly/ly/words.py to get out of sync with the online documentation.
     This class provides an easy way to compare words.py to the LilyPond online index. It
-    looks for entries online that start with a backslash (\\\\) then checks words.py to see
+    looks for entries online that start with a backslash (\\) then checks words.py to see
     if they are present there.  If not, the online term and a little context is printed.
     """
 
     # Change this to the current LilyPond index or enter at the command line
-    lilypond_index_url = "https://lilypond.org/doc/v2.23/Documentation/notation/lilypond-index"
+    lilypond_index_url = "https://lilypond.org/doc/v2.24/Documentation/notation/lilypond-index"
+    
     # Change this to the path to your python-ly/ly/words.py or enter at the command line
     python_ly_words_path = "/home/user_name/git-repos/python-ly/ly/words.py"
+    
     # Find a quoted word in python-ly/ly/words.py
     find_quoted_word = r"\s*'([A-Za-z][-A-Za-z\d]*?)',"
 
