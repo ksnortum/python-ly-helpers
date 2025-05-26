@@ -58,6 +58,12 @@ class SearchLilyPond:
 
             for version in self.versions:
                 url = html_template.format(version)
+                # In version 2.25, the commands and index pages have been combined
+                if version == 'v2.25':
+                    if name == 'index':
+                        url = "https://lilypond.org/doc/v2.25/Documentation/notation/index-of-commands-and-concepts"
+                    if name == 'commands':
+                        continue
                 text = get_text_from_html(url)
 
                 # break html text into lines and remove leading and trailing spaces while searching for text

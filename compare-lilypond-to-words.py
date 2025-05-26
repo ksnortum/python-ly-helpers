@@ -13,7 +13,7 @@ class CompareLilyPondToWords:
     """
 
     # Change this to the current LilyPond index or enter at the command line
-    lilypond_index_url = "https://lilypond.org/doc/v2.24/Documentation/notation/lilypond-index"
+    lilypond_index_url = "https://lilypond.org/doc/v2.25/Documentation/notation/index-of-commands-and-concepts"
     
     # Change this to the path to your python-ly/ly/words.py or enter at the command line
     python_ly_words_path = "/home/user_name/git-repos/python-ly/ly/words.py"
