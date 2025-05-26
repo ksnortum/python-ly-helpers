@@ -4,6 +4,8 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
+import sys
+
 
 def get_description_list_text(soup: BeautifulSoup) -> str:
     """
@@ -45,7 +47,13 @@ def get_text_from_html(url: str) -> str:
     """
     Get lines of text from a web page.  Tables and "dl" elements are processed for readability.
     """
-    html = urlopen(url).read()
+    html = ""
+    try:
+        html = urlopen(url).read()
+    except Exception as e:
+        print(f"Failed to retrieve HTML from {url}: {e}", file=sys.stderr)
+        return ""
+    
     soup = BeautifulSoup(html, features="html.parser")
     table_text = get_table_text(soup)
     dl_text = get_description_list_text(soup)
