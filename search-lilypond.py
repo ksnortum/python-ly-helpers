@@ -19,7 +19,7 @@ class SearchLilyPond:
         'commands':  "https://lilypond.org/doc/{}/Documentation/notation/lilypond-command-index",
         'index':     "https://lilypond.org/doc/{}/Documentation/notation/lilypond-index",
     }
-    versions = ('v2.25', 'v2.24', 'v2.22', 'v2.20', 'v2.18', 'v2.16', 'v2.14')
+    versions = ('v2.26', 'v2.24', 'v2.22', 'v2.20', 'v2.18', 'v2.16', 'v2.14')
 
     @staticmethod
     def get_arguments() -> argparse.Namespace:
@@ -58,10 +58,10 @@ class SearchLilyPond:
 
             for version in self.versions:
                 url = html_template.format(version)
-                # In version 2.25, the commands and index pages have been combined
-                if version == 'v2.25':
+                # In version 2.26, the commands and index pages have been combined
+                if version == 'v2.26':
                     if name == 'index':
-                        url = "https://lilypond.org/doc/v2.25/Documentation/notation/index-of-commands-and-concepts"
+                        url = "https://lilypond.org/doc/v2.26/Documentation/notation/index-of-commands-and-concepts"
                     if name == 'commands':
                         continue
                 text = get_text_from_html(url)
